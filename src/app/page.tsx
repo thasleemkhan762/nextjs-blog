@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getAllPosts } from "./lib/getBlogPosts";
 
 export default async function Home() {
@@ -29,14 +28,7 @@ export default async function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Read Next.js docs
+          📁 Read Next.js docs
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -44,14 +36,7 @@ export default async function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          📚 Learn
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -59,14 +44,7 @@ export default async function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          🌐 Go to nextjs.org →
         </a>
       </footer>
     </div>

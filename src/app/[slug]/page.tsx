@@ -4,7 +4,7 @@ import fsSync from "fs";
 import { notFound } from "next/navigation";
 import matter from "gray-matter";
 import { formatDate } from "../lib/utils";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXRemote } from "next-mdx-remote-client/rsc";
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "content/blog");
@@ -18,9 +18,9 @@ export async function generateStaticParams() {
 export default async function BlogPost({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const filePath = path.join(process.cwd(), "content/blog", `${slug}.mdx`);
 
   if (!fsSync.existsSync(filePath)) {
